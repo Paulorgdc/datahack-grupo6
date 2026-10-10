@@ -1,0 +1,6 @@
+duckdb
+pandas
+openpyxl
+pyarrow
+requests
+sqlalchemy
