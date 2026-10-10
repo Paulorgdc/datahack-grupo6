@@ -27,3 +27,5 @@ desktop.ini
 
 # Segredos
 .env
+.env.*
+!.env.example

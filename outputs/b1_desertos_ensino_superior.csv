@@ -1,0 +1,142 @@
+co_municipio,no_municipio,pop_18_24,vagas_presenciais_2024,n_cursos_presenciais,n_ies,vagas_por_100_jovens,deserto
+5100102,Acorizal,352,0,0,0,0.0,True
+5100359,Alto Boa Vista,696,0,0,0,0.0,True
+5100409,Alto Garças,1444,0,0,0,0.0,True
+5100508,Alto Paraguai,691,0,1,1,0.0,True
+5100607,Alto Taquari,1285,0,0,0,0.0,True
+5100805,Apiacás,951,0,0,0,0.0,True
+5101001,Araguaiana,306,0,0,0,0.0,True
+5101209,Araguainha,78,0,0,0,0.0,True
+5101308,Arenápolis,1107,0,0,0,0.0,True
+5101605,Barão de Melgaço,626,0,0,0,0.0,True
+5101852,Bom Jesus do Araguaia,778,0,0,0,0.0,True
+5101902,Brasnorte,1896,0,1,1,0.0,True
+5102603,Campinápolis,1821,0,0,0,0.0,True
+5102686,Campos de Júlio,1057,0,2,1,0.0,True
+5102694,Canabrava do Norte,416,0,0,0,0.0,True
+5102793,Carlinda,921,0,0,0,0.0,True
+5102850,Castanheira,736,0,0,0,0.0,True
+5103007,Chapada dos Guimarães,1670,0,0,0,0.0,True
+5103056,Cláudia,975,0,0,0,0.0,True
+5103106,Cocalinho,574,0,0,0,0.0,True
+5103304,Comodoro,1929,0,1,1,0.0,True
+5103361,Conquista D'Oeste,392,0,0,0,0.0,True
+5103379,Cotriguaçu,1146,0,0,0,0.0,True
+5103437,Curvelândia,502,0,0,0,0.0,True
+5103452,Denise,772,0,0,0,0.0,True
+5103601,Dom Aquino,597,0,0,0,0.0,True
+5103700,Feliz Natal,1255,0,0,0,0.0,True
+5103809,Figueirópolis D'Oeste,267,0,0,0,0.0,True
+5103858,Gaúcha do Norte,931,0,0,0,0.0,True
+5103908,General Carneiro,642,0,0,0,0.0,True
+5103957,Glória D'Oeste,217,0,0,0,0.0,True
+5104203,Guiratinga,932,0,0,0,0.0,True
+5104500,Indiavaí,215,0,1,1,0.0,True
+5104526,Ipiranga do Norte,942,0,0,0,0.0,True
+5104542,Itanhangá,824,0,0,0,0.0,True
+5104559,Itaúba,473,0,0,0,0.0,True
+5104906,Jangada,695,0,0,0,0.0,True
+5105002,Jauru,795,0,0,0,0.0,True
+5105176,Juruena,1101,0,0,0,0.0,True
+5105200,Juscimeira,865,0,0,0,0.0,True
+5105234,Lambari D'Oeste,470,0,0,0,0.0,True
+5105309,Luciara,273,0,3,1,0.0,True
+5105507,Vila Bela da Santíssima Trindade,1733,0,2,1,0.0,True
+5105622,Mirassol d'Oeste,2706,0,0,0,0.0,True
+5105903,Nobres,1501,0,0,0,0.0,True
+5106000,Nortelândia,519,0,0,0,0.0,True
+5106158,Nova Bandeirantes,1215,0,0,0,0.0,True
+5106174,Nova Nazaré,462,0,0,0,0.0,True
+5106182,Nova Lacerda,658,0,1,1,0.0,True
+5106190,Nova Santa Helena,400,0,0,0,0.0,True
+5106208,Nova Brasilândia,321,0,0,0,0.0,True
+5106232,Nova Olímpia,1887,0,0,0,0.0,True
+5106240,Nova Ubiratã,1294,0,0,0,0.0,True
+5106265,Novo Mundo,610,0,0,0,0.0,True
+5106273,Novo Horizonte do Norte,241,0,0,0,0.0,True
+5106281,Novo São Joaquim,572,0,0,0,0.0,True
+5106299,Paranaíta,1130,0,0,0,0.0,True
+5106307,Paranatinga,2876,0,1,1,0.0,True
+5106315,Novo Santo Antônio,193,0,0,0,0.0,True
+5106372,Pedra Preta,1841,0,0,0,0.0,True
+5106422,Peixoto de Azevedo,3625,0,0,0,0.0,True
+5106455,Planalto da Serra,286,0,0,0,0.0,True
+5106505,Poconé,2899,0,0,0,0.0,True
+5106703,Ponte Branca,144,0,0,0,0.0,True
+5106778,Porto Alegre do Norte,1201,0,0,0,0.0,True
+5106802,Porto dos Gaúchos,550,0,0,0,0.0,True
+5106828,Porto Esperidião,1085,0,0,0,0.0,True
+5106851,Porto Estrela,248,0,0,0,0.0,True
+5107008,Poxoréu,1939,0,0,0,0.0,True
+5107156,Reserva do Cabaçal,178,0,0,0,0.0,True
+5107180,Ribeirão Cascalheira,1001,0,0,0,0.0,True
+5107198,Ribeirãozinho,246,0,0,0,0.0,True
+5107206,Rio Branco,425,0,0,0,0.0,True
+5107248,Santa Carmem,576,0,0,0,0.0,True
+5107263,Santo Afonso,199,0,0,0,0.0,True
+5107297,São José do Povo,169,0,0,0,0.0,True
+5107305,São José do Rio Claro,1525,0,0,0,0.0,True
+5107354,São José do Xingu,683,0,0,0,0.0,True
+5107404,São Pedro da Cipa,390,0,0,0,0.0,True
+5107578,Rondolândia,404,0,0,0,0.0,True
+5107701,Rosário Oeste,1283,0,0,0,0.0,True
+5107743,Santa Cruz do Xingu,288,0,0,0,0.0,True
+5107750,Salto do Céu,318,0,0,0,0.0,True
+5107768,Santa Rita do Trivelato,273,0,0,0,0.0,True
+5107776,Santa Terezinha,747,0,0,0,0.0,True
+5107792,Santo Antônio do Leste,466,0,0,0,0.0,True
+5107859,São Félix do Araguaia,1434,0,1,1,0.0,True
+5107875,Sapezal,3855,0,0,0,0.0,True
+5107883,Serra Nova Dourada,132,0,0,0,0.0,True
+5107941,Tabaporã,967,0,0,0,0.0,True
+5108006,Tapurah,1738,0,0,0,0.0,True
+5108055,Terra Nova do Norte,1048,0,1,1,0.0,True
+5108105,Tesouro,211,0,0,0,0.0,True
+5108204,Torixoréu,352,0,0,0,0.0,True
+5108303,União do Sul,392,0,0,0,0.0,True
+5108352,Vale de São Domingos,212,0,0,0,0.0,True
+5108501,Vera,1437,0,0,0,0.0,True
+5108808,Nova Guarita,447,0,0,0,0.0,True
+5108857,Nova Marilândia,354,0,0,0,0.0,True
+5108907,Nova Maringá,698,0,0,0,0.0,True
+5108956,Nova Monte Verde,818,0,0,0,0.0,True
+5108600,Vila Rica,2284,1,3,1,0.04,False
+5106216,Nova Canaã do Norte,1059,4,1,1,0.38,False
+5104609,Itiquira,1174,5,1,1,0.43,False
+5101407,Aripuanã,2948,16,3,1,0.54,False
+5103254,Colniza,2881,45,1,1,1.56,False
+5107800,Santo Antônio de Leverger,1405,35,1,1,2.49,False
+5105580,Marcelândia,1172,32,3,1,2.73,False
+5107065,Querência,3520,100,2,2,2.84,False
+5103353,Confresa,4148,145,9,2,3.5,False
+5102678,Campo Verde,5433,235,6,2,4.33,False
+5102702,Canarana,2833,128,1,1,4.52,False
+5100201,Água Boa,3287,156,3,2,4.75,False
+5102637,Campo Novo do Parecis,5928,350,9,2,5.9,False
+5106109,Nossa Senhora do Livramento,964,60,1,1,6.22,False
+5100300,Alto Araguaia,1699,123,3,1,7.24,False
+5106752,Pontes e Lacerda,5874,428,11,2,7.29,False
+5105606,Matupá,2266,196,4,2,8.65,False
+5100250,Alta Floresta,6445,646,14,4,10.02,False
+5105259,Lucas do Rio Verde,10483,1349,23,4,12.87,False
+5106224,Nova Mutum,6995,943,11,3,13.48,False
+5106257,Nova Xavantina,2596,368,6,1,14.18,False
+5107958,Tangará da Serra,12323,1779,30,4,14.44,False
+5105150,Juína,4871,824,13,3,16.92,False
+5105101,Juara,3425,620,9,2,18.1,False
+5101258,Araputanga,1548,284,8,1,18.35,False
+5103502,Diamantino,2223,409,8,3,18.4,False
+5101704,Barra do Bugres,3077,579,10,1,18.82,False
+5107602,Rondonópolis,26040,4907,68,8,18.84,False
+5107040,Primavera do Leste,10335,2012,25,3,19.47,False
+5107925,Sorriso,13879,3003,33,6,21.64,False
+5107909,Sinop,25253,6001,73,7,23.76,False
+5104807,Jaciara,2913,785,9,2,26.95,False
+5103205,Colíder,2994,869,16,3,29.02,False
+5108402,Várzea Grande,32489,9675,48,6,29.78,False
+5103403,Cuiabá,67493,22158,204,23,32.83,False
+5101803,Barra do Garças,7903,4990,52,4,63.14,False
+5102504,Cáceres,9775,7208,32,3,73.74,False
+5106653,Pontal do Araguaia,723,564,8,1,78.01,False
+5104104,Guarantã do Norte,3474,3484,33,4,100.29,False
+5107107,São José dos Quatro Marcos,1522,6279,13,1,412.55,False

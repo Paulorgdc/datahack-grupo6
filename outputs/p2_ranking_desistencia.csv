@@ -1,0 +1,220 @@
+nivel,coorte,ano_do_curso,co_cine_rotulo,no_cine_rotulo,co_cine_area_geral,no_cine_area_geral,n_cursos,qt_ingressantes,tda_pct,tca_pct,tap_pct,ranking_desistencia,n_grupos_ranqueados,delta_tda_pp_vs_coorte_anterior
+CINE_AREA_GERAL,2015,5,,,06,Computação e Tecnologias da Informação e Comunicação (TIC),38,1525,61.6393,21.9016,16.459,1,10,
+CINE_AREA_GERAL,2015,5,,,07,"Engenharia, produção e construção",67,6710,56.5555,10.5981,32.8464,2,10,
+CINE_AREA_GERAL,2015,5,,,02,Artes e humanidades,6,268,55.9701,36.9403,7.0896,3,10,
+CINE_AREA_GERAL,2015,5,,,05,"Ciências naturais, matemática e estatística",10,387,55.814,17.5711,26.615,4,10,
+CINE_AREA_GERAL,2015,5,,,04,"Negócios, administração e direito",130,14607,52.3811,27.0122,20.6067,5,10,
+CINE_AREA_GERAL,2015,5,,,10,Serviços,13,990,52.2527,43.3864,4.3609,6,10,
+CINE_AREA_GERAL,2015,5,,,03,"Ciências sociais, comunicação e informação",24,1987,50.0755,17.9668,31.9577,7,10,
+CINE_AREA_GERAL,2015,5,,,01,Educação,99,5041,49.2053,33.9052,16.8895,8,10,
+CINE_AREA_GERAL,2015,5,,,09,Saúde e bem-estar,86,7022,47.3747,25.6253,27.0,9,10,
+CINE_AREA_GERAL,2015,5,,,08,"Agricultura, silvicultura, pesca e veterinária",42,3381,44.2985,14.7957,40.9058,10,10,
+CINE_AREA_GERAL,2020,5,,,10,Serviços,17,713,73.7728,20.7574,5.4698,1,10,21.5201
+CINE_AREA_GERAL,2020,5,,,04,"Negócios, administração e direito",156,9223,62.4947,24.068,13.4373,2,10,10.1136
+CINE_AREA_GERAL,2020,5,,,07,"Engenharia, produção e construção",91,3290,58.8994,17.0229,24.0777,3,10,2.3439
+CINE_AREA_GERAL,2020,5,,,06,Computação e Tecnologias da Informação e Comunicação (TIC),34,1048,57.6336,14.8855,27.4809,4,10,-4.0058
+CINE_AREA_GERAL,2020,5,,,09,Saúde e bem-estar,128,6454,55.3824,25.9274,18.6902,5,10,8.0078
+CINE_AREA_GERAL,2020,5,,,02,Artes e humanidades,6,136,52.9412,19.1176,27.9412,6,10,-3.029
+CINE_AREA_GERAL,2020,5,,,03,"Ciências sociais, comunicação e informação",38,2102,52.0709,24.7993,23.1298,7,10,1.9955
+CINE_AREA_GERAL,2020,5,,,08,"Agricultura, silvicultura, pesca e veterinária",51,2809,47.9737,18.1272,33.8991,8,10,3.6752
+CINE_AREA_GERAL,2020,5,,,01,Educação,92,2887,47.8435,15.2082,36.9483,9,10,-1.3618
+CINE_AREA_GERAL,2020,5,,,05,"Ciências naturais, matemática e estatística",8,323,26.935,13.6223,59.4427,10,10,-28.879
+CINE_ROTULO,2015,5,0711B01,Biocombustíveis,07,"Engenharia, produção e construção",1,41,80.4878,14.6341,4.878,1,99,
+CINE_ROTULO,2015,5,0532G03,Geoprocessamento,05,"Ciências naturais, matemática e estatística",1,24,79.1667,16.6667,4.1667,2,99,
+CINE_ROTULO,2015,5,1041C01,Ciências aeronáuticas,10,Serviços,1,65,78.4615,15.3846,6.1538,3,99,
+CINE_ROTULO,2015,5,0312C02,Ciências sociais,03,"Ciências sociais, comunicação e informação",1,40,77.5,2.5,20.0,4,99,
+CINE_ROTULO,2015,5,0712E01,Engenharia ambiental,07,"Engenharia, produção e construção",2,175,73.7143,5.7143,20.5714,5,99,
+CINE_ROTULO,2015,5,0614C01,Ciência da computação,06,Computação e Tecnologias da Informação e Comunicação (TIC),2,64,73.4375,12.5,14.0625,6,99,
+CINE_ROTULO,2015,5,0114M01,Matemática formação de professor,01,Educação,9,426,72.77,8.9202,18.3099,7,99,
+CINE_ROTULO,2015,5,0732C01,Construção de edifícios,07,"Engenharia, produção e construção",1,43,69.7674,4.6512,25.5814,8,99,
+CINE_ROTULO,2015,5,0721E01,Engenharia de alimentos,07,"Engenharia, produção e construção",4,185,69.1892,10.8108,20.0,9,99,
+CINE_ROTULO,2015,5,0915F02,Fonoaudiologia,09,Saúde e bem-estar,1,45,68.8889,20.0,11.1111,10,99,
+CINE_ROTULO,2015,5,0223F01,Filosofia,02,Artes e humanidades,1,36,66.6667,19.4444,13.8889,11,99,
+CINE_ROTULO,2015,5,0811A03,Agronegócio,08,"Agricultura, silvicultura, pesca e veterinária",3,164,66.4634,29.878,3.6585,12,99,
+CINE_ROTULO,2015,5,0613C01,Ciência da computação,06,Computação e Tecnologias da Informação e Comunicação (TIC),7,373,65.9517,10.1877,23.8606,13,99,
+CINE_ROTULO,2015,5,0612R01,Redes de computadores,06,Computação e Tecnologias da Informação e Comunicação (TIC),6,191,65.445,21.9895,12.5654,14,99,
+CINE_ROTULO,2015,5,0542E01,Estatística,05,"Ciências naturais, matemática e estatística",1,78,65.3846,2.5641,32.0513,15,99,
+CINE_ROTULO,2015,5,0732C02,Controle de obras,07,"Engenharia, produção e construção",1,23,65.2174,30.4348,4.3478,16,99,
+CINE_ROTULO,2015,5,0615S02,Sistemas de informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),9,329,65.0456,28.2675,6.6869,17,99,
+CINE_ROTULO,2015,5,0725E02,Engenharia de produção,07,"Engenharia, produção e construção",10,708,64.548,5.791,29.661,18,99,
+CINE_ROTULO,2015,5,0533F01,Física,05,"Ciências naturais, matemática e estatística",1,55,63.6364,10.9091,25.4545,19,99,
+CINE_ROTULO,2015,5,0114C02,Ciências naturais formação de professor,01,Educação,1,85,63.5294,24.7059,11.7647,20,99,
+CINE_ROTULO,2015,5,0918S01,Saúde coletiva,09,Saúde e bem-estar,1,89,62.9213,16.8539,20.2247,21,99,
+CINE_ROTULO,2015,5,0714A01,Automação industrial,07,"Engenharia, produção e construção",1,58,62.069,8.6207,29.3103,22,99,
+CINE_ROTULO,2015,5,0212M01,Moda,02,Artes e humanidades,1,47,61.7021,36.1702,2.1277,23,99,
+CINE_ROTULO,2015,5,0114Q01,Química formação de professor,01,Educação,4,126,61.1111,9.5238,29.3651,24,99,
+CINE_ROTULO,2015,5,0413C01,Comércio exterior,04,"Negócios, administração e direito",1,36,61.1111,25.0,13.8889,25,99,
+CINE_ROTULO,2015,5,0115L15,Letras português inglês formação de professor,01,Educação,5,200,61.0,22.5,16.5,26,99,
+CINE_ROTULO,2015,5,0416G01,Gestão comercial,04,"Negócios, administração e direito",3,160,59.375,40.0,0.625,27,99,
+CINE_ROTULO,2015,5,1012E01,Estética e cosmética,10,Serviços,6,466,58.9345,37.6283,3.4372,28,99,
+CINE_ROTULO,2015,5,0915E01,Educação física,09,Saúde e bem-estar,7,605,58.129,28.2991,13.572,29,99,
+CINE_ROTULO,2015,5,0114F02,Física formação de professor,01,Educação,5,198,58.0808,19.1919,22.7273,30,99,
+CINE_ROTULO,2015,5,0712G01,Gestão ambiental,07,"Engenharia, produção e construção",2,100,58.0,24.0,18.0,31,99,
+CINE_ROTULO,2015,5,0915F01,Fisioterapia,09,Saúde e bem-estar,11,1233,57.9886,15.0852,26.9262,32,99,
+CINE_ROTULO,2015,5,0732E03,Engenharia de transportes,07,"Engenharia, produção e construção",1,57,57.8947,12.2807,29.8246,33,99,
+CINE_ROTULO,2015,5,0613S01,Sistemas de informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),11,481,57.7963,22.869,19.3347,34,99,
+CINE_ROTULO,2015,5,0414P01,Publicidade e propaganda,04,"Negócios, administração e direito",5,232,57.7586,26.2931,15.9483,35,99,
+CINE_ROTULO,2015,5,0114C03,Ciências sociais formação de professor,01,Educação,1,40,57.5,2.5,40.0,36,99,
+CINE_ROTULO,2015,5,0221T01,Teologia,02,Artes e humanidades,2,82,57.3171,34.1463,8.5366,37,99,
+CINE_ROTULO,2015,5,0412G01,Gestão financeira,04,"Negócios, administração e direito",2,84,57.1429,42.8571,0.0,38,99,
+CINE_ROTULO,2015,5,0413A01,Administração,04,"Negócios, administração e direito",37,2799,56.9805,30.1538,12.8657,39,99,
+CINE_ROTULO,2015,5,0114G01,Geografia formação de professor,01,Educação,7,332,56.9277,23.7952,19.2771,40,99,
+CINE_ROTULO,2015,5,0714E05,Engenharia de controle e automação,07,"Engenharia, produção e construção",5,290,56.7586,1.3793,41.8621,41,99,
+CINE_ROTULO,2015,5,0732E01,Engenharia civil,07,"Engenharia, produção e construção",14,2644,56.3733,13.6612,29.9655,42,99,
+CINE_ROTULO,2015,5,0511B01,Biologia,05,"Ciências naturais, matemática e estatística",5,137,56.2044,24.0876,19.708,43,99,
+CINE_ROTULO,2015,5,0115L04,Letras inglês formação de professor,01,Educação,1,18,55.5556,38.8889,5.5556,44,99,
+CINE_ROTULO,2015,5,0114F01,Filosofia formação de professor,01,Educação,2,94,55.3191,22.3404,22.3404,45,99,
+CINE_ROTULO,2015,5,1022S01,Segurança no trabalho,10,Serviços,1,29,55.1724,44.8276,0.0,46,99,
+CINE_ROTULO,2015,5,0713E05,Engenharia elétrica,07,"Engenharia, produção e construção",6,515,54.5631,5.8252,39.6117,47,99,
+CINE_ROTULO,2015,5,0414M01,Marketing,04,"Negócios, administração e direito",3,109,54.1284,37.6147,8.2569,48,99,
+CINE_ROTULO,2015,5,0413L01,Logística,04,"Negócios, administração e direito",2,88,53.9141,39.1625,6.9234,49,99,
+CINE_ROTULO,2015,5,0531Q01,Química,05,"Ciências naturais, matemática e estatística",1,52,53.8462,15.3846,30.7692,50,99,
+CINE_ROTULO,2015,5,0311E01,Economia,03,"Ciências sociais, comunicação e informação",3,277,53.7906,16.9675,29.2419,51,99,
+CINE_ROTULO,2015,5,0914R01,Radiologia,09,Saúde e bem-estar,3,218,53.6697,44.0367,2.2936,52,99,
+CINE_ROTULO,2015,5,0715E02,Engenharia mecânica,07,"Engenharia, produção e construção",4,373,53.6193,5.3619,41.0188,53,99,
+CINE_ROTULO,2015,5,0115L14,Letras português francês formação de professor,01,Educação,1,28,53.5714,3.5714,42.8571,54,99,
+CINE_ROTULO,2015,5,0321J01,Jornalismo,03,"Ciências sociais, comunicação e informação",5,220,53.1818,28.6364,18.1818,55,99,
+CINE_ROTULO,2015,5,0114B01,Biologia formação de professor,01,Educação,10,441,53.0612,11.5646,35.3741,56,99,
+CINE_ROTULO,2015,5,0721A01,Alimentos,07,"Engenharia, produção e construção",2,97,52.9834,25.2421,21.7744,57,99,
+CINE_ROTULO,2015,5,0714E04,Engenharia de computação,07,"Engenharia, produção e construção",3,153,52.9412,1.9608,45.098,58,99,
+CINE_ROTULO,2015,5,0923S01,Serviço social,09,Saúde e bem-estar,4,305,51.8033,33.7705,14.4262,59,99,
+CINE_ROTULO,2015,5,0421D01,Direito,04,"Negócios, administração e direito",31,7629,51.4394,19.6877,28.8729,60,99,
+CINE_ROTULO,2015,5,0731A02,Arquitetura e urbanismo,07,"Engenharia, produção e construção",7,1084,50.6801,12.6796,36.6403,61,99,
+CINE_ROTULO,2015,5,0212D03,Design de interiores,02,Artes e humanidades,1,99,50.5051,47.4747,2.0202,62,99,
+CINE_ROTULO,2015,5,0411C01,Contabilidade,04,"Negócios, administração e direito",31,2633,50.2342,36.7348,13.031,63,99,
+CINE_ROTULO,2015,5,0915N01,Nutrição,09,Saúde e bem-estar,5,561,50.0891,36.5419,13.369,64,99,
+CINE_ROTULO,2015,5,0811A02,Agroindústria,08,"Agricultura, silvicultura, pesca e veterinária",1,18,50.0,16.6667,33.3333,65,99,
+CINE_ROTULO,2015,5,0413G07,Gestão de pessoas,04,"Negócios, administração e direito",8,480,49.7917,47.5,2.7083,66,99,
+CINE_ROTULO,2015,5,1015T01,Turismo,10,Serviços,4,144,49.7685,34.1512,16.0802,67,99,
+CINE_ROTULO,2015,5,0913E01,Enfermagem,09,Saúde e bem-estar,23,1631,49.7509,16.5021,33.7469,68,99,
+CINE_ROTULO,2015,5,0114E03,Educação física formação de professor,01,Educação,15,862,49.3039,38.051,12.645,69,99,
+CINE_ROTULO,2015,5,0313P01,Psicologia,03,"Ciências sociais, comunicação e informação",12,1337,48.9155,16.38,34.7046,70,99,
+CINE_ROTULO,2015,5,0312G01,Geografia,03,"Ciências sociais, comunicação e informação",1,58,48.2759,15.5172,36.2069,71,99,
+CINE_ROTULO,2015,5,0413G09,Gestão do agronegócio,04,"Negócios, administração e direito",4,274,48.1752,47.8102,4.0146,72,99,
+CINE_ROTULO,2015,5,0613S02,Sistemas para internet,06,Computação e Tecnologias da Informação e Comunicação (TIC),1,27,48.1481,7.4074,44.4444,73,99,
+CINE_ROTULO,2015,5,0114H01,História formação de professor,01,Educação,3,210,47.619,20.4762,31.9048,74,99,
+CINE_ROTULO,2015,5,0914B01,Biomedicina,09,Saúde e bem-estar,6,446,46.861,45.0673,8.0717,75,99,
+CINE_ROTULO,2015,5,0821E01,Engenharia florestal,08,"Agricultura, silvicultura, pesca e veterinária",4,257,46.132,8.1778,45.6902,76,99,
+CINE_ROTULO,2015,5,0916F01,Farmácia,09,Saúde e bem-estar,13,703,45.5192,23.1863,31.2945,77,99,
+CINE_ROTULO,2015,5,0811E01,Engenharia agrícola,08,"Agricultura, silvicultura, pesca e veterinária",2,164,44.5122,10.9756,44.5122,78,99,
+CINE_ROTULO,2015,5,0811A04,Agronomia,08,"Agricultura, silvicultura, pesca e veterinária",21,1972,44.4814,14.6158,40.9027,79,99,
+CINE_ROTULO,2015,5,0811M01,Manejo da produção agrícola,08,"Agricultura, silvicultura, pesca e veterinária",1,16,43.75,25.0,31.25,80,99,
+CINE_ROTULO,2015,5,0115L13,Letras português formação de professor,01,Educação,7,339,43.3628,33.0383,23.5988,81,99,
+CINE_ROTULO,2015,5,0811Z01,Zootecnia,08,"Agricultura, silvicultura, pesca e veterinária",6,383,42.5587,14.3603,43.0809,82,99,
+CINE_ROTULO,2015,5,0724E01,Engenharia de minas,07,"Engenharia, produção e construção",1,40,42.5,7.5,50.0,83,99,
+CINE_ROTULO,2015,5,0115L12,Letras português espanhol formação de professor,01,Educação,4,87,38.4368,49.6092,11.954,84,99,
+CINE_ROTULO,2015,5,0415S01,Secretariado,04,"Negócios, administração e direito",1,58,37.931,43.1034,18.9655,85,99,
+CINE_ROTULO,2015,5,0113P01,Pedagogia,01,Educação,22,1524,37.4672,55.9711,6.5617,86,99,
+CINE_ROTULO,2015,5,0712E02,Engenharia ambiental e sanitária,07,"Engenharia, produção e construção",1,67,37.3134,8.9552,53.7313,87,99,
+CINE_ROTULO,2015,5,1013G01,Gastronomia,10,Serviços,1,286,36.3636,63.6364,0.0,88,99,
+CINE_ROTULO,2015,5,0841M01,Medicina veterinária,08,"Agricultura, silvicultura, pesca e veterinária",4,407,34.6437,15.2334,50.1229,89,99,
+CINE_ROTULO,2015,5,0322B01,Biblioteconomia,03,"Ciências sociais, comunicação e informação",1,29,34.4828,13.7931,51.7241,90,99,
+CINE_ROTULO,2015,5,0413G05,Gestão de negócios,04,"Negócios, administração e direito",1,21,33.3333,14.2857,52.381,91,99,
+CINE_ROTULO,2015,5,0911O01,Odontologia,09,Saúde e bem-estar,6,732,28.5519,50.8197,20.6284,92,99,
+CINE_ROTULO,2015,5,0612G01,Gestão da tecnologia da informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),2,60,28.3333,68.3333,3.3333,93,99,
+CINE_ROTULO,2015,5,0711E05,Engenharia química,07,"Engenharia, produção e construção",1,57,28.0702,0.0,71.9298,94,99,
+CINE_ROTULO,2015,5,0321R01,"Rádio, TV e internet",03,"Ciências sociais, comunicação e informação",1,26,23.0769,53.8462,23.0769,95,99,
+CINE_ROTULO,2015,5,0114M02,Música formação de professor,01,Educação,1,16,18.75,31.25,50.0,96,99,
+CINE_ROTULO,2015,5,0912M01,Medicina,09,Saúde e bem-estar,6,454,14.8747,1.994,83.1313,97,99,
+CINE_ROTULO,2015,5,0532G02,Geologia,05,"Ciências naturais, matemática e estatística",1,41,14.6341,36.5854,48.7805,98,99,
+CINE_ROTULO,2015,5,0115L07,Letras língua brasileira de sinais formação de professor,01,Educação,1,15,0.0,73.3333,26.6667,99,99,
+CINE_ROTULO,2020,5,0811A03,Agronegócio,08,"Agricultura, silvicultura, pesca e veterinária",3,31,100.0,0.0,0.0,1,100,33.5366
+CINE_ROTULO,2020,5,0713E01,Eletrotécnica industrial,07,"Engenharia, produção e construção",1,34,88.2353,0.0,11.7647,2,100,
+CINE_ROTULO,2020,5,0914R01,Radiologia,09,Saúde e bem-estar,2,78,87.1795,12.8205,0.0,3,100,33.5098
+CINE_ROTULO,2020,5,0413G01,Gestão da produção,04,"Negócios, administração e direito",1,14,85.7143,14.2857,0.0,4,100,
+CINE_ROTULO,2020,5,1013G01,Gastronomia,10,Serviços,3,162,83.3333,16.6667,0.0,5,100,46.9697
+CINE_ROTULO,2020,5,0811M01,Manejo da produção agrícola,08,"Agricultura, silvicultura, pesca e veterinária",1,36,83.3333,2.7778,13.8889,6,100,39.5833
+CINE_ROTULO,2020,5,0612R01,Redes de computadores,06,Computação e Tecnologias da Informação e Comunicação (TIC),4,96,82.2917,4.1667,13.5417,7,100,16.8466
+CINE_ROTULO,2020,5,0211F01,Fotografia,02,Artes e humanidades,1,28,82.1429,17.8571,0.0,8,100,
+CINE_ROTULO,2020,5,1041C01,Ciências aeronáuticas,10,Serviços,1,88,80.6818,17.0455,2.2727,9,100,2.2203
+CINE_ROTULO,2020,5,0725E02,Engenharia de produção,07,"Engenharia, produção e construção",10,123,78.8618,16.2602,4.878,10,100,14.3138
+CINE_ROTULO,2020,5,0414M01,Marketing,04,"Negócios, administração e direito",2,36,77.7778,22.2222,0.0,11,100,23.6493
+CINE_ROTULO,2020,5,0681A01,Agrocomputação,06,Computação e Tecnologias da Informação e Comunicação (TIC),2,85,76.4706,17.6471,5.8824,12,100,
+CINE_ROTULO,2020,5,0416G01,Gestão comercial,04,"Negócios, administração e direito",3,92,76.087,23.913,0.0,13,100,16.712
+CINE_ROTULO,2020,5,0413G05,Gestão de negócios,04,"Negócios, administração e direito",3,46,76.087,6.5217,17.3913,14,100,42.7536
+CINE_ROTULO,2020,5,0915E01,Educação física,09,Saúde e bem-estar,11,522,75.0958,18.9655,5.9387,15,100,16.9668
+CINE_ROTULO,2020,5,0712G01,Gestão ambiental,07,"Engenharia, produção e construção",2,66,74.2424,6.0606,19.697,16,100,16.2424
+CINE_ROTULO,2020,5,0811A02,Agroindústria,08,"Agricultura, silvicultura, pesca e veterinária",2,46,73.913,6.5217,19.5652,17,100,23.913
+CINE_ROTULO,2020,5,0532G03,Geoprocessamento,05,"Ciências naturais, matemática e estatística",1,34,73.5294,5.8824,20.5882,18,100,-5.6373
+CINE_ROTULO,2020,5,0221T01,Teologia,02,Artes e humanidades,1,22,72.7273,13.6364,13.6364,19,100,15.4102
+CINE_ROTULO,2020,5,0712E01,Engenharia ambiental,07,"Engenharia, produção e construção",1,22,72.7273,22.7273,4.5455,19,100,-0.987
+CINE_ROTULO,2020,5,0114C02,Ciências naturais formação de professor,01,Educação,1,25,72.0,4.0,24.0,21,100,8.4706
+CINE_ROTULO,2020,5,1012E01,Estética e cosmética,10,Serviços,11,389,71.9794,26.2211,1.7995,22,100,13.0449
+CINE_ROTULO,2020,5,0715E02,Engenharia mecânica,07,"Engenharia, produção e construção",8,290,71.7241,13.7931,14.4828,23,100,18.1048
+CINE_ROTULO,2020,5,0212D03,Design de interiores,02,Artes e humanidades,2,40,70.0,30.0,0.0,24,100,19.4949
+CINE_ROTULO,2020,5,0413G07,Gestão de pessoas,04,"Negócios, administração e direito",12,410,69.2683,22.6829,8.0488,25,100,19.4766
+CINE_ROTULO,2020,5,0732C01,Construção de edifícios,07,"Engenharia, produção e construção",1,29,68.9655,0.0,31.0345,26,100,-0.8019
+CINE_ROTULO,2020,5,0914B01,Biomedicina,09,Saúde e bem-estar,13,689,68.3599,28.0116,3.6284,27,100,21.499
+CINE_ROTULO,2020,5,0714A01,Automação industrial,07,"Engenharia, produção e construção",1,48,66.6667,14.5833,18.75,28,100,4.5977
+CINE_ROTULO,2020,5,0615S02,Sistemas de informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),2,14,64.2857,35.7143,0.0,29,100,-0.7599
+CINE_ROTULO,2020,5,0915F01,Fisioterapia,09,Saúde e bem-estar,17,911,63.2272,27.4424,9.3304,30,100,5.2386
+CINE_ROTULO,2020,5,0413A01,Administração,04,"Negócios, administração e direito",33,1294,62.8284,19.0881,18.0835,31,100,5.8479
+CINE_ROTULO,2020,5,0413L01,Logística,04,"Negócios, administração e direito",3,79,62.8191,32.0318,5.1491,32,100,8.905
+CINE_ROTULO,2020,5,0421D01,Direito,04,"Negócios, administração e direito",48,5388,62.4335,25.1639,12.4026,33,100,10.9941
+CINE_ROTULO,2020,5,0721E01,Engenharia de alimentos,07,"Engenharia, produção e construção",4,90,62.2222,2.2222,35.5556,34,100,-6.967
+CINE_ROTULO,2020,5,0915N01,Nutrição,09,Saúde e bem-estar,12,532,62.218,28.5714,9.2105,35,100,12.1289
+CINE_ROTULO,2020,5,0411C01,Contabilidade,04,"Negócios, administração e direito",35,1315,61.8251,24.5627,13.6122,36,100,11.5909
+CINE_ROTULO,2020,5,0731A02,Arquitetura e urbanismo,07,"Engenharia, produção e construção",14,610,61.8033,21.3115,16.8852,37,100,11.1232
+CINE_ROTULO,2020,5,0732E01,Engenharia civil,07,"Engenharia, produção e construção",23,1056,60.2073,25.8573,13.9354,38,100,3.8341
+CINE_ROTULO,2020,5,0613S01,Sistemas de informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),16,542,59.5941,14.7601,25.6458,39,100,1.7978
+CINE_ROTULO,2020,5,0413G09,Gestão do agronegócio,04,"Negócios, administração e direito",7,179,59.2179,27.933,12.8492,40,100,11.0427
+CINE_ROTULO,2020,5,0413G12,Gestão pública,04,"Negócios, administração e direito",4,188,59.0426,21.8085,19.1489,41,100,
+CINE_ROTULO,2020,5,0913E01,Enfermagem,09,Saúde e bem-estar,31,1552,57.9253,25.1289,16.9459,42,100,8.1743
+CINE_ROTULO,2020,5,0113P01,Pedagogia,01,Educação,19,690,57.8261,26.3768,15.7971,43,100,20.3589
+CINE_ROTULO,2020,5,0713E05,Engenharia elétrica,07,"Engenharia, produção e construção",9,326,57.362,16.2577,26.3804,44,100,2.7989
+CINE_ROTULO,2020,5,0313P01,Psicologia,03,"Ciências sociais, comunicação e informação",26,1648,56.9497,27.3229,15.7274,45,100,8.0342
+CINE_ROTULO,2020,5,0115L15,Letras português inglês formação de professor,01,Educação,5,120,55.8333,15.8333,28.3333,46,100,-5.1667
+CINE_ROTULO,2020,5,0321J01,Jornalismo,03,"Ciências sociais, comunicação e informação",6,169,55.6213,14.2012,30.1775,47,100,2.4395
+CINE_ROTULO,2020,5,0811A04,Agronomia,08,"Agricultura, silvicultura, pesca e veterinária",26,1622,55.5845,19.2122,25.2033,48,100,11.1031
+CINE_ROTULO,2020,5,0115L04,Letras inglês formação de professor,01,Educação,1,20,55.0,5.0,40.0,49,100,-0.5556
+CINE_ROTULO,2020,5,1015T01,Turismo,10,Serviços,2,74,54.0541,5.4054,40.5405,50,100,4.2855
+CINE_ROTULO,2020,5,0512B02,Biotecnologia,05,"Ciências naturais, matemática e estatística",1,36,52.7778,22.2222,25.0,51,100,
+CINE_ROTULO,2020,5,0114E03,Educação física formação de professor,01,Educação,14,374,52.139,15.7754,32.0856,52,100,2.8351
+CINE_ROTULO,2020,5,0714E04,Engenharia de computação,07,"Engenharia, produção e construção",4,169,52.071,5.9172,42.0118,53,100,-0.8702
+CINE_ROTULO,2020,5,0916F01,Farmácia,09,Saúde e bem-estar,16,510,51.9608,34.5098,13.5294,54,100,6.4416
+CINE_ROTULO,2020,5,0114B01,Biologia formação de professor,01,Educação,12,391,50.9571,11.0129,38.0299,55,100,-2.1041
+CINE_ROTULO,2020,5,0714E05,Engenharia de controle e automação,07,"Engenharia, produção e construção",5,140,50.7143,0.7143,48.5714,56,100,-6.0443
+CINE_ROTULO,2020,5,0414P01,Publicidade e propaganda,04,"Negócios, administração e direito",3,113,50.4425,26.5487,23.0088,57,100,-7.3161
+CINE_ROTULO,2020,5,0322B01,Biblioteconomia,03,"Ciências sociais, comunicação e informação",1,14,50.0,14.2857,35.7143,58,100,15.5172
+CINE_ROTULO,2020,5,0114M01,Matemática formação de professor,01,Educação,9,305,48.5246,9.5082,41.9672,59,100,-24.2454
+CINE_ROTULO,2020,5,0911O01,Odontologia,09,Saúde e bem-estar,13,820,47.3637,40.2869,12.3494,60,100,18.8118
+CINE_ROTULO,2020,5,0115L13,Letras português formação de professor,01,Educação,6,196,45.4082,18.3673,36.2245,61,100,2.0453
+CINE_ROTULO,2020,5,0613C01,Ciência da computação,06,Computação e Tecnologias da Informação e Comunicação (TIC),7,256,42.1875,13.2812,44.5313,62,100,-23.7642
+CINE_ROTULO,2020,5,0114G01,Geografia formação de professor,01,Educação,5,189,40.2116,8.9947,50.7937,63,100,-16.7161
+CINE_ROTULO,2020,5,0732C02,Controle de obras,07,"Engenharia, produção e construção",1,28,39.2857,7.1429,53.5714,64,100,-25.9317
+CINE_ROTULO,2020,5,0612G01,Gestão da tecnologia da informação,06,Computação e Tecnologias da Informação e Comunicação (TIC),2,23,39.1304,52.1739,8.6957,65,100,10.7971
+CINE_ROTULO,2020,5,0114Q01,Química formação de professor,01,Educação,5,154,38.961,3.8961,57.1429,66,100,-22.1501
+CINE_ROTULO,2020,5,0114F02,Física formação de professor,01,Educação,5,149,38.9262,2.0134,59.0604,67,100,-19.1546
+CINE_ROTULO,2020,5,0915F02,Fonoaudiologia,09,Saúde e bem-estar,1,24,37.5,54.1667,8.3333,68,100,-31.3889
+CINE_ROTULO,2020,5,0841M01,Medicina veterinária,08,"Agricultura, silvicultura, pesca e veterinária",5,408,37.0098,31.5126,31.4776,69,100,2.3661
+CINE_ROTULO,2020,5,0821E01,Engenharia florestal,08,"Agricultura, silvicultura, pesca e veterinária",4,183,35.5191,4.3716,60.1093,70,100,-10.6129
+CINE_ROTULO,2020,5,0413G04,Gestão de cooperativas,04,"Negócios, administração e direito",1,30,34.4828,65.5172,0.0,71,100,
+CINE_ROTULO,2020,5,0613S02,Sistemas para internet,06,Computação e Tecnologias da Informação e Comunicação (TIC),1,32,34.375,18.75,46.875,72,100,-13.7731
+CINE_ROTULO,2020,5,0721A01,Alimentos,07,"Engenharia, produção e construção",2,81,30.8642,7.4074,61.7284,73,100,-22.1192
+CINE_ROTULO,2020,5,0114H01,História formação de professor,01,Educação,3,142,30.2817,13.3803,56.338,74,100,-17.3374
+CINE_ROTULO,2020,5,0811Z01,Zootecnia,08,"Agricultura, silvicultura, pesca e veterinária",8,370,29.7297,12.7027,57.5676,75,100,-12.829
+CINE_ROTULO,2020,5,0415S01,Secretariado,04,"Negócios, administração e direito",1,39,28.2051,0.0,71.7949,76,100,-9.7259
+CINE_ROTULO,2020,5,0533F01,Física,05,"Ciências naturais, matemática e estatística",1,57,26.3158,3.5088,70.1754,77,100,-37.3206
+CINE_ROTULO,2020,5,0312G01,Geografia,03,"Ciências sociais, comunicação e informação",1,50,24.0,14.0,62.0,78,100,-24.2759
+CINE_ROTULO,2020,5,0923S01,Serviço social,09,Saúde e bem-estar,4,102,23.5294,27.451,49.0196,79,100,-28.2739
+CINE_ROTULO,2020,5,0531Q01,Química,05,"Ciências naturais, matemática e estatística",1,47,23.4043,6.383,70.2128,80,100,-30.4419
+CINE_ROTULO,2020,5,0711E05,Engenharia química,07,"Engenharia, produção e construção",1,39,23.0769,0.0,76.9231,81,100,-4.9933
+CINE_ROTULO,2020,5,0811E01,Engenharia agrícola,08,"Agricultura, silvicultura, pesca e veterinária",2,113,22.1239,8.8496,69.0265,82,100,-22.3883
+CINE_ROTULO,2020,5,0912M01,Medicina,09,Saúde e bem-estar,7,637,21.6641,3.1397,75.1962,83,100,6.7893
+CINE_ROTULO,2020,5,0311E01,Economia,03,"Ciências sociais, comunicação e informação",3,199,20.603,18.0905,61.3065,84,100,-33.1876
+CINE_ROTULO,2020,5,0732E03,Engenharia de transportes,07,"Engenharia, produção e construção",1,39,20.5128,2.5641,76.9231,85,100,-37.3819
+CINE_ROTULO,2020,5,0114C03,Ciências sociais formação de professor,01,Educação,1,25,20.0,8.0,72.0,86,100,-37.5
+CINE_ROTULO,2020,5,0115L14,Letras português francês formação de professor,01,Educação,1,16,18.75,12.5,68.75,87,100,-34.8214
+CINE_ROTULO,2020,5,0114M02,Música formação de professor,01,Educação,1,11,18.1818,0.0,81.8182,88,100,-0.5682
+CINE_ROTULO,2020,5,0918S01,Saúde coletiva,09,Saúde e bem-estar,1,77,16.8831,15.5844,67.5325,89,100,-46.0382
+CINE_ROTULO,2020,5,0724E01,Engenharia de minas,07,"Engenharia, produção e construção",1,39,15.3846,5.1282,79.4872,90,100,-27.1154
+CINE_ROTULO,2020,5,0712E02,Engenharia ambiental e sanitária,07,"Engenharia, produção e construção",1,57,14.0351,7.0175,78.9474,91,100,-23.2783
+CINE_ROTULO,2020,5,0532G02,Geologia,05,"Ciências naturais, matemática e estatística",1,30,13.3333,0.0,86.6667,92,100,-1.3008
+CINE_ROTULO,2020,5,0542E01,Estatística,05,"Ciências naturais, matemática e estatística",1,54,12.963,12.963,74.0741,93,100,-52.4217
+CINE_ROTULO,2020,5,0211C01,Cinema e audiovisual,02,Artes e humanidades,1,25,12.0,20.0,68.0,94,100,
+CINE_ROTULO,2020,5,0114F01,Filosofia formação de professor,01,Educação,2,38,10.5263,21.0526,68.4211,95,100,-44.7928
+CINE_ROTULO,2020,5,0115L07,Letras língua brasileira de sinais formação de professor,01,Educação,1,21,9.5238,23.8095,66.6667,96,100,9.5238
+CINE_ROTULO,2020,5,0115L12,Letras português espanhol formação de professor,01,Educação,1,21,9.5238,33.3333,57.1429,96,100,-28.913
+CINE_ROTULO,2020,5,0223F01,Filosofia,02,Artes e humanidades,1,21,9.5238,4.7619,85.7143,96,100,-57.1429
+CINE_ROTULO,2020,5,0511B01,Biologia,05,"Ciências naturais, matemática e estatística",2,65,9.2308,33.8462,56.9231,99,100,-46.9736
+CINE_ROTULO,2020,5,0312C02,Ciências sociais,03,"Ciências sociais, comunicação e informação",1,22,9.0909,9.0909,81.8182,100,100,-68.4091

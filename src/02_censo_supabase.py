@@ -1,0 +1,248 @@
+"""Censo da Educação Superior (Cursos 2021-2024) + IBGE (SIDRA 9514) -> Supabase -> P3, B1 e B2.
+
+1. Lê cada CSV do Censo em chunks (';', latin-1) e descarta NA LEITURA tudo que não é
+   CO_UF='51' (MT) e TP_NIVEL_ACADEMICO='1' (Graduação): nada de outros estados chega à memória
+   acumulada nem ao Supabase.
+2. Obtém a população de 18-24 anos dos municípios de MT (Censo 2022, SIDRA tabela 9514) e guarda o
+   JSON bruto em archives/ibge/ (cache).
+3. Carrega public.stg_censo_cursos_mt e public.stg_ibge_populacao_mt (sql/04_stg_censo_mt.sql) com
+   TRUNCATE + COPY na mesma transação, conferindo a contagem de linhas inseridas.
+4. Executa sql/05, 06 e 07 no próprio Supabase e grava outputs/p3_*.csv, b1_*.csv e b2_*.csv.
+
+Uso:  python src/02_censo_supabase.py [--raw archives/inep_censo_microdados] [--recriar] [--atualizar-ibge]
+"""
+from __future__ import annotations
+
+import argparse
+import io
+import json
+import logging
+import os
+import re
+import sys
+from pathlib import Path
+
+import pandas as pd
+import requests
+from sqlalchemy import text
+
+from db import ROOT, get_engine, testar_conexao
+
+log = logging.getLogger("datahack.censo")
+
+SQL_DIR = ROOT / "sql"
+UF_MT = "51"
+NIVEL_GRADUACAO = "1"
+ANOS = (2021, 2022, 2023, 2024)
+CHUNK = 100_000
+
+T_CURSOS = "public.stg_censo_cursos_mt"
+T_IBGE = "public.stg_ibge_populacao_mt"
+
+COLS_STR = [  # códigos e rótulos: sempre texto
+    "CO_UF", "CO_MUNICIPIO", "NO_MUNICIPIO", "TP_ORGANIZACAO_ACADEMICA", "TP_CATEGORIA_ADMINISTRATIVA",
+    "TP_REDE", "CO_IES", "CO_CURSO", "NO_CURSO", "CO_CINE_ROTULO", "NO_CINE_ROTULO",
+    "CO_CINE_AREA_GERAL", "NO_CINE_AREA_GERAL", "TP_GRAU_ACADEMICO", "TP_MODALIDADE_ENSINO", "TP_NIVEL_ACADEMICO",
+]
+COLS_INT = [
+    "NU_ANO_CENSO", "QT_VG_TOTAL", "QT_ING", "QT_ING_FIES", "QT_ING_PROUNII", "QT_ING_PROUNIP",
+    "QT_MAT", "QT_CONC", "QT_SIT_TRANCADA", "QT_SIT_DESVINCULADO", "QT_SIT_TRANSFERIDO", "QT_SIT_FALECIDO",
+]
+# Ordem exata das colunas em sql/04 (stg_censo_cursos_mt)
+ORDEM = [
+    "NU_ANO_CENSO", "CO_UF", "CO_MUNICIPIO", "NO_MUNICIPIO", "TP_ORGANIZACAO_ACADEMICA",
+    "TP_CATEGORIA_ADMINISTRATIVA", "TP_REDE", "CO_IES", "CO_CURSO", "NO_CURSO",
+    "CO_CINE_ROTULO", "NO_CINE_ROTULO", "CO_CINE_AREA_GERAL", "NO_CINE_AREA_GERAL",
+    "TP_GRAU_ACADEMICO", "TP_MODALIDADE_ENSINO", "TP_NIVEL_ACADEMICO",
+    "QT_VG_TOTAL", "QT_ING", "QT_ING_FIES", "QT_ING_PROUNII", "QT_ING_PROUNIP",
+    "QT_MAT", "QT_CONC", "QT_SIT_TRANCADA", "QT_SIT_DESVINCULADO", "QT_SIT_TRANSFERIDO", "QT_SIT_FALECIDO",
+]
+
+# SIDRA 9514: população residente (v93), Censo 2022; idades 18 anos, 19 anos e 20 a 24 anos.
+SIDRA_URL = (
+    "https://apisidra.ibge.gov.br/values/t/9514/n6/in%20n3%2051/v/93/p/2022"
+    "/c2/6794/c286/113635/c287/6575,6576,93087"
+)
+IBGE_CACHE = ROOT / "archives" / "ibge" / "ibge_9514_mt_18_24_2022.json"
+
+
+# ----------------------------------------------------------------------- Censo
+def listar_csv_cursos(raiz: Path, anos: tuple[int, ...]) -> dict[int, Path]:
+    achados: dict[int, Path] = {}
+    for p in raiz.rglob("*.CSV"):
+        m = re.fullmatch(r"MICRODADOS_.*CURSOS_(\d{4})\.CSV", p.name, flags=re.I)
+        if m and int(m.group(1)) in anos:
+            achados[int(m.group(1))] = p
+    faltam = sorted(set(anos) - set(achados))
+    if faltam:
+        raise SystemExit(f"CSV de Cursos ausente para {faltam} em {raiz}")
+    return dict(sorted(achados.items()))
+
+
+def ler_csv_mt(path: Path) -> pd.DataFrame:
+    """Lê em chunks e filtra MT + Graduação por chunk; só o filtrado é acumulado."""
+    usar = lambda c: c in ORDEM
+    partes, lidas = [], 0
+    for ch in pd.read_csv(path, sep=";", encoding="latin-1", dtype=str, usecols=usar, chunksize=CHUNK, low_memory=False):
+        lidas += len(ch)
+        partes.append(ch[(ch["CO_UF"].str.strip() == UF_MT) & (ch["TP_NIVEL_ACADEMICO"].str.strip() == NIVEL_GRADUACAO)])
+    df = pd.concat(partes, ignore_index=True)
+    faltam = [c for c in ORDEM if c not in df.columns]
+    if faltam:
+        raise ValueError(f"{path.name}: colunas ausentes {faltam}")
+    log.info("censo %s: %s linhas lidas -> %s (MT, Graduação)", path.name, f"{lidas:,}", f"{len(df):,}")
+    return df[ORDEM]
+
+
+def carregar_censo(raiz: Path, anos: tuple[int, ...]) -> pd.DataFrame:
+    df = pd.concat([ler_csv_mt(p) for p in listar_csv_cursos(raiz, anos).values()], ignore_index=True)
+    for c in COLS_STR:
+        df[c] = df[c].str.strip()
+    for c in COLS_INT:
+        df[c] = pd.to_numeric(df[c], errors="coerce").astype("Int64")
+    if set(df["CO_UF"]) != {UF_MT} or set(df["TP_NIVEL_ACADEMICO"]) != {NIVEL_GRADUACAO}:
+        raise ValueError("Filtro falhou: restaram linhas fora de MT/Graduação")
+    dup = int(df.duplicated(["NU_ANO_CENSO", "CO_CURSO", "CO_MUNICIPIO"]).sum())
+    if dup:
+        raise ValueError(f"{dup} linhas duplicadas em (ano, curso, município)")
+    log.info("Censo em memória: %s linhas | ~%.1f MB | anos %s", f"{len(df):,}",
+             df.memory_usage(deep=True).sum() / 1e6, sorted(df["NU_ANO_CENSO"].unique().tolist()))
+    return df
+
+
+# ------------------------------------------------------------------------ IBGE
+def obter_populacao(atualizar: bool) -> pd.DataFrame:
+    if IBGE_CACHE.exists() and not atualizar:
+        linhas = json.loads(IBGE_CACHE.read_text(encoding="utf-8"))
+        log.info("IBGE: cache %s", IBGE_CACHE.relative_to(ROOT))
+    else:
+        log.info("IBGE: baixando SIDRA 9514 (MT, 18-24 anos, Censo 2022)")
+        r = requests.get(SIDRA_URL, timeout=60)
+        r.raise_for_status()
+        linhas = r.json()
+        IBGE_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        IBGE_CACHE.write_text(json.dumps(linhas, ensure_ascii=False), encoding="utf-8")
+    campos, dados = linhas[0], linhas[1:]  # a linha 0 é o dicionário de campos
+    k_idade = next(k for k, v in campos.items() if v.startswith("Idade (C"))  # posição varia com a URL
+    df = pd.DataFrame(
+        {"co_municipio": [d["D1C"] for d in dados],
+         "no_municipio": [re.sub(r" - MT$", "", d["D1N"]) for d in dados],
+         "idade": [d[k_idade] for d in dados], "v": [d["V"] for d in dados]}
+    )
+    df["v"] = pd.to_numeric(df["v"], errors="coerce")  # '-', 'X', '...' -> NULL
+    larga = df.pivot(index=["co_municipio", "no_municipio"], columns="idade", values="v")  # falha se houver duplicata
+    larga.columns.name = None
+    larga = larga.rename(columns={"6575": "p18", "6576": "p19", "93087": "pop_20_24"}).reset_index()
+    larga["pop_18_19"] = larga["p18"] + larga["p19"]
+    larga["pop_18_24"] = larga["pop_18_19"] + larga["pop_20_24"]
+    larga["nu_ano_censo"] = 2022
+    larga["co_municipio"] = larga["co_municipio"].astype(str)
+    out = larga[["co_municipio", "no_municipio", "nu_ano_censo", "pop_18_19", "pop_20_24", "pop_18_24"]].copy()
+    for c in ["nu_ano_censo", "pop_18_19", "pop_20_24", "pop_18_24"]:
+        out[c] = out[c].astype("Int64")
+    if not out["co_municipio"].str.startswith(UF_MT).all():
+        raise ValueError("IBGE: município fora de MT")
+    log.info("IBGE: %d municípios | jovens 18-24 em MT: %s", len(out), f"{int(out['pop_18_24'].sum()):,}")
+    return out.sort_values("co_municipio").reset_index(drop=True)
+
+
+# ---------------------------------------------------------------- Carga Supabase
+def _copy(cur, tabela: str, df: pd.DataFrame) -> int:
+    """TRUNCATE + COPY; devolve a contagem observada no banco e valida contra o DataFrame."""
+    buf = io.StringIO()
+    df.to_csv(buf, index=False, header=False, na_rep="")
+    buf.seek(0)
+    cur.execute(f"SELECT count(*) FROM {tabela}")
+    antes = cur.fetchone()[0]
+    cur.execute(f"TRUNCATE TABLE {tabela}")
+    cur.copy_expert(f"COPY {tabela} ({', '.join(c.lower() for c in df.columns)}) FROM STDIN WITH (FORMAT csv, NULL '')", buf)
+    cur.execute(f"SELECT count(*) FROM {tabela}")
+    depois = cur.fetchone()[0]
+    if depois != len(df):
+        raise RuntimeError(f"{tabela}: banco={depois} vs memória={len(df)} (rollback)")
+    cur.execute(f"SELECT pg_size_pretty(pg_total_relation_size('{tabela}'))")
+    log.info("%s: %s -> %s linhas (truncate-and-load) | %s", tabela, f"{antes:,}", f"{depois:,}", cur.fetchone()[0])
+    return depois
+
+
+def carregar_supabase(engine, censo: pd.DataFrame, ibge: pd.DataFrame, recriar: bool) -> None:
+    with engine.begin() as conn:  # uma transação: tudo ou nada
+        cur = conn.connection.cursor()
+        if recriar:
+            log.info("--recriar: DROP das tabelas de staging do Censo/IBGE")
+            cur.execute(f"DROP TABLE IF EXISTS {T_CURSOS}, {T_IBGE}")
+        cur.execute((SQL_DIR / "04_stg_censo_mt.sql").read_text(encoding="utf-8"))
+        _copy(cur, T_CURSOS, censo)
+        _copy(cur, T_IBGE, ibge)
+
+
+def validar_somente_mt(engine) -> None:
+    with engine.connect() as conn:
+        ufs = [r[0] for r in conn.execute(text(f"SELECT DISTINCT co_uf FROM {T_CURSOS}"))]
+        niveis = [r[0] for r in conn.execute(text(f"SELECT DISTINCT tp_nivel_academico FROM {T_CURSOS}"))]
+        fora = conn.execute(text(f"SELECT count(*) FROM {T_CURSOS} c LEFT JOIN {T_IBGE} p USING (co_municipio) WHERE p.co_municipio IS NULL")).scalar()
+    if ufs != [UF_MT] or niveis != [NIVEL_GRADUACAO]:
+        raise RuntimeError(f"Staging fora do escopo: co_uf={ufs}, nível={niveis}")
+    log.info("Validação: só co_uf=%s e nível %s | linhas do Censo sem município no IBGE: %d", UF_MT, NIVEL_GRADUACAO, fora)
+
+
+# ---------------------------------------------------------------------- Saídas
+def executar_sql(engine, arquivo: str) -> pd.DataFrame:
+    with engine.connect() as conn:
+        return pd.read_sql(text((SQL_DIR / arquivo).read_text(encoding="utf-8")), conn)
+
+
+def gravar_csv(df: pd.DataFrame, destino: Path) -> None:
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    tmp = destino.with_name(destino.name + ".tmp")
+    try:
+        df.to_csv(tmp, index=False, encoding="utf-8", lineterminator="\n")
+        os.replace(tmp, destino)
+    finally:
+        tmp.unlink(missing_ok=True)
+    log.info("Gravado %s (%d linhas)", destino.relative_to(ROOT), len(df))
+
+
+def extrair(engine, out: Path) -> None:
+    p3 = executar_sql(engine, "05_p3_evasao_censo.sql")
+    gravar_csv(p3, out / "p3_evasao_censo.csv")
+    b1 = executar_sql(engine, "06_b1_desertos.sql")
+    gravar_csv(b1, out / "b1_desertos_ensino_superior.csv")
+    b2 = executar_sql(engine, "07_b2_financiamento.sql")
+    gravar_csv(b2, out / "b2_financiamento_permanencia.csv")
+    if p3.empty or b1.empty or b2.empty:
+        raise RuntimeError("Alguma consulta retornou vazio — verifique a carga.")
+    log.info("P3: %d células | B1: %d municípios, %d desertos | B2: %d células",
+             len(p3), len(b1), int(b1["deserto"].sum()), len(b2))
+
+
+# ------------------------------------------------------------------------- Main
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--raw", default=os.environ.get("CENSO_RAW", str(ROOT / "archives" / "inep_censo_microdados")))
+    ap.add_argument("--out", default=str(ROOT / "outputs"))
+    ap.add_argument("--anos", type=int, nargs="+", default=list(ANOS))
+    ap.add_argument("--recriar", action="store_true", help="DROP + CREATE das tabelas (mudança de schema)")
+    ap.add_argument("--atualizar-ibge", action="store_true", help="ignora o cache e baixa o SIDRA de novo")
+    ap.add_argument("--so-consultas", action="store_true", help="pula leitura/carga e recalcula P3/B1/B2 do que está no banco")
+    a = ap.parse_args(argv)
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+
+    engine = get_engine()
+    if not testar_conexao(engine):
+        return 1
+    if not a.so_consultas:
+        log.info("[1/4] Leitura e filtro em memória (Censo)")
+        censo = carregar_censo(Path(a.raw), tuple(a.anos))
+        log.info("[2/4] População IBGE")
+        ibge = obter_populacao(a.atualizar_ibge)
+        log.info("[3/4] Carga no Supabase")
+        carregar_supabase(engine, censo, ibge, a.recriar)
+    validar_somente_mt(engine)
+    log.info("[4/4] P3, B1 e B2 no Supabase")
+    extrair(engine, Path(a.out))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
